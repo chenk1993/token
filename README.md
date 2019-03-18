@@ -1,6 +1,7 @@
 # token
 token
 什么是JWT
+
 JSON Web Token 简称JWT。
 一个JWT实际上就是一个字符串，它由三部分组成，头部、载荷与签名。
 JWT生成的token是这样的
@@ -10,6 +11,7 @@ eyJpc3MiOiJKb2huI.eyJpc3MiOiJ.Kb2huIFd1IEp
 生成的token，是3段，用.连接。
 
 头部
+
 用于描述关于该JWT的最基本的信息，例如其类型以及签名所用的算法等。这也可以被表示成一个JSON对象。
 例如：
 {
@@ -18,6 +20,7 @@ eyJpc3MiOiJKb2huI.eyJpc3MiOiJ.Kb2huIFd1IEp
 }
 
 载荷
+
 其实就是自定义的数据，一般存储用户Id，过期时间等信息。也就是JWT的核心所在，因为这些数据就是使后端知道此token是哪个用户已经登录的凭证。而且这些数据是存在token里面的，由前端携带，所以后端几乎不需要保存任何数据。
 例如：
 {
@@ -26,6 +29,7 @@ eyJpc3MiOiJKb2huI.eyJpc3MiOiJ.Kb2huIFd1IEp
 }
 
 签名
+
 签名其实就是：
 1.头部和载荷各自base64加密后用.连接起来，然后就形成了xxx.xx的前两段token。
 2.最后一段token的形成是，前两段加入一个密匙用HS256算法或者其他算法加密形成。
