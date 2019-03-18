@@ -35,6 +35,7 @@ eyJpc3MiOiJKb2huI.eyJpc3MiOiJ.Kb2huIFd1IEp
 2.最后一段token的形成是，前两段加入一个密匙用HS256算法或者其他算法加密形成。
 
 所以token3段的形成就是在签名处形成的。
+
 项目 Maven 配置
 ![image](https://github.com/chenk1993/token/blob/master/img/2.png)
 ![image](https://github.com/chenk1993/token/blob/master/img/3.png)
